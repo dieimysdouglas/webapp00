@@ -10,7 +10,7 @@ from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
 import base64
 
 #DB
-rD = requests.get(https://docs.google.com/spreadsheets/d/e/2PACX-1vTmRQ-zDdaMOmBGKo81-Qy4wwr-6Vz5uUf-Est1tGFhek1FP9LLl3kyN741OkRkTGFp-x-CReLewBKU/pub?gid=1591446506&single=true&output=csv')
+rD = requests.get('https://docs.google.com/spreadsheets/d/e/2PACX-1vTmRQ-zDdaMOmBGKo81-Qy4wwr-6Vz5uUf-Est1tGFhek1FP9LLl3kyN741OkRkTGFp-x-CReLewBKU/pub?gid=1591446506&single=true&output=csv')
 dataD = rD.content
 dfD = pd.read_csv(BytesIO(dataD), index_col=0)
 dfD.columns = ['opiniao', 'resumo', 'idade']
